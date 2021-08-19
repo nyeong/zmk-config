@@ -11,6 +11,8 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
+#define NAV     1
+#define NUMBER  2
 
 
 / {
@@ -36,12 +38,39 @@
 // | ____ |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ____ |
 //                    | ESC | SPC | TAB |   | ENT | BSPC | DEL |
                         bindings = <
-   &none &kp Q       &kp W      &kp E      &kp R        &kp T   &kp Y &kp U        &kp I      &kp O      &kp P          &bt BT_CLR 
-   &none &hm LCTRL A &hm LALT S &hm LGUI D &hm LSHIFT F &kp G   &kp H &hm RSHIFT J &hm RGUI K &hm LALT L &hm RCTRL SEMI &bt BT_SEL 0
-   &ext_power EP_TOG &kp Z       &kp X      &kp C      &kp V        &kp B   &kp N &kp M        &kp COMMA  &kp DOT    &kp FSLH       &out OUT_TOG
-             &kp ESC &kp SPACE &kp TAB   &kp RET &kp BSPC &kp DEL
+   &none &kp Q       &kp W      &kp E      &kp R        &kp T   &kp Y &kp U        &kp I      &kp O      &kp P          &none
+   &none &hm LCTRL A &hm LALT S &hm LGUI D &hm LSHIFT F &kp G   &kp H &hm RSHIFT J &hm RGUI K &hm LALT L &hm RCTRL SEMI &none
+   &none &kp Z       &kp X      &kp C      &kp V        &kp B   &kp N &kp M        &kp COMMA  &kp DOT    &kp FSLH       &none
+             &kp ESC &lt NUMBER SPACE &kp TAB              &kp RET &lt NAV BSPC &kp DEL
                         >;
                 };
 
+                nav_layer {
+// -----------------------------------------------------------------------------------------
+// | ___ | ___ | ___ |  ↑  | ___ | ___ |   | ___ | ___ | ___ | ___ | ___ | ___ |
+// | ___ | ___ |  ←  |  ↓  |  →  | ___ |   | ___ | SFT | CMD | ALT | CTL | ___ |
+// | ___ | ___ | ___ | ___ | ___ | ___ |   | ___ | ___ | ___ | ___ | ___ | ___ |
+//                   | ___ | ___ | ___ |   | ___ | ___ | ___ |
+                        bindings = <
+   &none &none &none     &kp UP   &none    &none      &none     &none     &none    &none    &none     &none
+   &none &none &kp RIGHT &kp DOWN &kp LEFT &none      &none     &kp RSHFT &kp RCMD &kp LALT &kp RCTRL &none
+   &none &none &none     &none    &none    &none      &none     &none     &none    &none    &none     &none
+                         &none    &none    &none      &none     &none     &none
+                        >;
+                }
+
+                number_layer {
+// -----------------------------------------------------------------------------------------
+// | ___ | ___ | ___ | ___ | ___ | ___ |   | ___ |  7  |  8  |  9  |  `  | ___ |
+// | ___ | CTL | ALT | CMD | SFT | ___ |   | ___ |  4  |  5  |  6  |  =  | ___ |
+// | ___ | ___ | ___ | ___ | ___ | ___ |   | ___ |  1  |  2  |  3  |  \  | ___ |
+//                   | ___ | ___ | ___ |   |  -  |  ;  |  0  |
+                        bindings = <
+   &none &none     &none    &none    &none     &none      &none     &kp N7   &kp N8  &kp N9 &kp GRAVE &none
+   &none &kp LCTRL &kp LALT &kp LCMD &kp LSHFT &none      &none     &kp N4   &kp N5  &kp N6 &kp EQUAL &none
+   &none &none     &none    &none    &none     &none      &none     &kp N1   &kp N2  &kp N3 &kp BSLH  &none
+                            &none    &none     &none      &kp MINUS &kp SEMI &kp N0
+                        >;
+                }
         };
 };
