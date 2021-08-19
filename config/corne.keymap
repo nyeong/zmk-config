@@ -57,7 +57,7 @@
    &none &none &none     &none    &none    &none      &none     &none     &none    &none    &none     &none
                          &none    &none    &none      &none     &none     &none
                         >;
-                }
+                };
 
                 number_layer {
 // -----------------------------------------------------------------------------------------
@@ -71,6 +71,6 @@
    &none &none     &none    &none    &none     &none      &none     &kp N1   &kp N2  &kp N3 &kp BSLH  &none
                             &none    &none     &none      &kp MINUS &kp SEMI &kp N0
                         >;
-                }
+                };
         };
 };
