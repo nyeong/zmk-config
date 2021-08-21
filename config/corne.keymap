@@ -80,10 +80,10 @@
 // | RESET | _____ | ___ | VMU | VMD | MUT |   | ___ | ___ | ___ | ___ | ___ | ___ |
 //                       | ___ | ___ | ___ |   | ___ | ___ | ___ |
                         bindings = <
-   &ext_power EP_ON    &bt BT_ON &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4     &none     &none    &none    &none  &none &none
-   &ext_power EP_OFF   &bt BT_OFF  &none     &none    &none     &none      &none     &kp RSHFT &kp RCMD &kp LALT &kp RCTRL &none
-   &reset              &none       &none     &kp C_VOL_UP    &kp C_VOL_DOWN     &kp K_MUTE &none     &none     &none    &none    &none     &none
-                         &none    &none     &none      &none     &none     &none
+   &ext_power EP_ON    &out OUT_BLE &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3   &bt BT_SEL 4     &none     &none     &none    &none    &none     &none
+   &ext_power EP_OFF   &out OUT_USB &none        &none        &none          &none            &none     &kp RSHFT &kp RCMD &kp LALT &kp RCTRL &none
+   &reset              &none        &none        &kp C_VOL_UP &kp C_VOL_DOWN &kp K_MUTE       &none     &none     &none    &none    &none     &none
+                                                 &none        &none          &none            &none     &none     &none
                         >;
                 };
         };
