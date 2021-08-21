@@ -39,7 +39,7 @@
 //                    | ESC | SPC | TAB |   | ENT | BSPC | DEL |
                         bindings = <
    &none &kp Q       &kp W      &kp E      &kp R        &kp T   &kp Y &kp U        &kp I      &kp O      &kp P          &none
-   &none &hm LCTRL A &hm LALT S &hm LGUI D &hm LSHIFT F &kp G   &kp H &hm RSHIFT J &hm RGUI K &hm LALT L &hm RCTRL SEMI &none
+   &none &hm LCTRL A &hm LALT S &hm LGUI D &hm LSHIFT F &kp G   &kp H &hm RSHIFT J &hm RGUI K &hm LALT L &hm RCTRL SQT  &none
    &none &kp Z       &kp X      &kp C      &kp V        &kp B   &kp N &kp M        &kp COMMA  &kp DOT    &kp FSLH       &none
              &kp ESC &lt NUMBER SPACE &kp TAB              &kp RET &lt NAV BSPC &lt SYSTEM DEL
                         >;
@@ -72,7 +72,6 @@
                             &none    &none     &none      &kp MINUS &kp SEMI &kp N0
                         >;
                 };
-        };
 
                 system_layer {
 // -----------------------------------------------------------------------------------------
@@ -87,5 +86,6 @@
                          &none    &none     &none      &none     &none     &none
                         >;
                 };
+        };
 
 };
