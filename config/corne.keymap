@@ -57,7 +57,7 @@
    &none &none &none     &kp UP   &none     &none      &none     &none     &none    &none    &none     &none
    &none &none &kp LEFT  &kp DOWN &kp RIGHT &none      &none     &kp RSHFT &kp RCMD &kp LALT &kp RCTRL &none
    &none &none &none     &none    &none     &none      &none     &none     &none    &none    &none     &none
-                         &none    &none     &none      &none     &none     &none
+                         &none    &none     &none      &none     &trans     &none
                         >;
                 };
 
@@ -71,7 +71,7 @@
    &none &none     &none    &none    &none     &none      &none     &kp N7   &kp N8  &kp N9 &kp GRAVE &none
    &none &kp LCTRL &kp LALT &kp LCMD &kp LSHFT &none      &none     &kp N4   &kp N5  &kp N6 &kp EQUAL &none
    &none &none     &none    &none    &none     &none      &none     &kp N1   &kp N2  &kp N3 &kp BSLH  &none
-                            &none    &none     &none      &kp MINUS &kp SEMI &kp N0
+                            &none    &trans     &none      &kp MINUS &kp SEMI &kp N0
                         >;
                 };
 
@@ -85,7 +85,7 @@
    &ext_power EP_ON    &out OUT_BLE &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &none     &none     &none    &none    &none     &none
    &ext_power EP_OFF   &out OUT_USB &none        &none        &none        &none            &none     &kp RSHFT &kp RCMD &kp LALT &kp RCTRL &none
    &reset              &bt BT_CLR   &none        &kp C_VOL_UP &kp C_VOL_DN &kp K_MUTE       &none     &none     &none    &none    &none     &none
-                                                 &none        &none        &none            &none     &none     &none
+                                                 &none        &none        &none            &none     &none     &trans
                         >;
                 };
 
@@ -99,7 +99,7 @@
    &none &none &none &kp LBKT  &kp RBKT  &none        &none &none     &none    &none    &none     &none
    &none &none &none &kp LPAR  &kp RPAR  &kp CAPS     &none &kp RSHFT &kp RCMD &kp LALT &kp RCTRL &none
    &none &none &none &kp LBRC  &kp RBRC  &none        &none &none     &none    &none    &none     &none
-                     &none       &none   &none        &none &none     &none
+                     &kp ESC   &kp SPACE &kp TAB      &trans &none     &none
                         >;
                 };
 
@@ -113,7 +113,7 @@
    &none &none     &none    &none    &none     &none      &none     &kp AMPS &kp STAR  &kp LPAR  &kp TILDE &none
    &none &kp LCTRL &kp LALT &kp LCMD &kp LSHFT &none      &none     &kp DLLR &kp PRCNT &kp CARET &kp PLUS  &none
    &none &none     &none    &none    &none     &none      &none     &kp EXCL &kp AT    &kp HASH  &kp PIPE  &none
-                            &none    &none     &none      &kp UNDER &kp COLON &none
+                            &none    &none     &trans      &kp UNDER &kp COLON &none
                         >;
                 };
         };
