@@ -16,6 +16,7 @@
 #define MOU 4
 #define NAV 5
 #define SYS 6
+#define LNG 7
 
 / {
         behaviors {
@@ -39,10 +40,10 @@
 // | ____ |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ____ |
 //                    | ESC | SPC | TAB |   | ENT | BSPC | DEL |
                         bindings = <
-   &none &kp Q       &kp W      &kp E        &kp R        &kp T     &kp Y &kp U         &kp I          &kp O        &kp P          &none
-   &none &hm LCTRL A &hm LALT S &hm LGUI D   &hm LSHIFT F &kp G     &kp H &hm RSHIFT J  &hm RGUI K     &hm LALT L   &hm RCTRL SEMI &none
-   &none &kp Z       &kp X      &kp C        &kp V        &kp B     &kp N &kp M         &kp COMMA      &kp DOT      &kp FSLH       &none
-                          &lt FUN ESC &lt NUM SPACE &lt SYM TAB     &lt MOU RET &lt NAV BSPC &lt SYS DEL
+   &none &kp Q       &kp W      &kp E        &kp R        &kp T         &kp Y     &kp U         &kp I          &kp O        &kp P          &none
+   &none &hm LCTRL A &hm LALT S &hm LGUI D   &hm LSHIFT F &lt LNG G     &lt LNG H &hm RSHIFT J  &hm RGUI K     &hm LALT L   &hm RCTRL SEMI &none
+   &none &kp Z       &kp X      &kp C        &kp V        &kp B         &kp N     &kp M         &kp COMMA      &kp DOT      &kp FSLH       &none
+                                &lt FUN ESC &lt NUM SPACE &lt SYM TAB   &lt MOU RET &lt NAV BSPC &lt SYS DEL
                         >;
                 };
 
@@ -125,6 +126,20 @@
    &none  &kp C_BRI_DN   &kp C_PREV &kp C_PP     &kp C_NEXT   &kp C_VOL_DN     &none  &kp RSHFT  &kp RCMD  &kp LALT  &kp RCTRL  &none
    &none  &kp C_BRI_AUTO &bt BT_CLR &out OUT_USB &out OUT_BLE &kp C_MUTE       &none  &none      &none     &none     &none      &none
                                  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2        &none &none &trans 
+                        >;
+                };
+
+                long_layer {
+// -----------------------------------------------------------------------------------------
+// | ____ |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | ____ |
+// | ____ |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  | ____ |
+// | ____ |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ____ |
+//                    | ESC | SPC | TAB |   | ENT | BSPC | DEL |
+                        bindings = <
+   &none &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U  &kp I     &kp O   &kp P    &none
+   &none &kp A &kp S &kp D &kp F &kp G     &kp H &kp J  &kp K     &kp L   &kp SEMI &none
+   &none &kp Z &kp X &kp C &kp V &kp B     &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &none
+             &kp ESC &kp SPACE &kp TAB     &kp RET &kp BSPC &kp DEL
                         >;
                 };
 
